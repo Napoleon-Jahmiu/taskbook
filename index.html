@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <script type="text/javascript" src="app.js" defer></script> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+   
+    <title>My Daily Routine</title>
+</head>
+<body>
+    <div class="container">
+        <h5 class="welcome">Welcome: <span class="name"></span></h5>
+        <h1>My Daily Schedule Routine</h1>
+        
+            <form id="tasks-form">
+            <div>
+                <label for="tasks">Tasks</label>
+                <input type="text" id="tasks" placeholder="Enter Task" class="u-full-width">
+            </div>
+
+            <div>
+                <label for="time">Time</label>
+                <input type="time" id="time" placeholder="Specify Time" class="u-full-width">
+            </div>
+
+            <div>
+                <label for="rate">Level of Importance</label>
+                <input type="text" id="rate" placeholder="Level of Importance" class="u-full-width">
+            </div>
+        
+            <input type="submit"  value="Schedule">
+            </form>
+        
+            <hr>
+
+            <table class="u-full-width">
+                <thead>
+                    <tr class="table">
+                        <td>Task</th>
+                        <td>Time</th>
+                        <td>Level of Importance</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody class="routine-list"></tbody>
+            </table>
+    </div>
+    <script type="text/javascript" src="app.js" defer></script>
+</body>
+
+
+</html>

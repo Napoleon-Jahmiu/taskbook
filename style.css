@@ -1,0 +1,24 @@
+.error .success {
+    padding: 5px;
+    color: #fff;
+    margin: 5px 0 15px 0;
+}
+
+.success {
+    background-color: green;
+}
+
+.error {
+    background-color: red;
+}
+
+.table {
+    display: flex;
+    justify-content: space-between;
+    border: #333 1px solid;
+    padding: 0 10px;
+}
+
+.welcome {
+    float: right;
+}
