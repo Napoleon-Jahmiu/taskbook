@@ -13,17 +13,17 @@ UI.prototype.addRoutineToList = function(outine) {
     const list = document.getElementById('routine-list');
 
     // Create a Table row (tr) Element
-    const tableRow = document.createElement('tr');
+    const row = document.createElement('tr');
 
     // Insert Cols
-    tableRow.innerHTML = `
+    row.innerHTML = `
         <td>${this.task}</td>
-        <td>${this.time}</td>
-        <td>${this.rate}</td>
+        <td>${time}</td>
+        <td>${rate}</td>
         <td><a href="#" class="delete-items">X</a></td>
     `;
 
-    list.appendChild(tableRow);
+    list.appendChild(row);
 }
 
 // Clear Fields
