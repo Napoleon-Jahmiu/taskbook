@@ -1,15 +1,16 @@
 // Routine Constructor
-function Routine(task, time, rate) {
-    this.task = task;
+function Routine(tasks, time, rate) {
+    this.tasks = tasks;
     this.time = time;
     this.rate = rate;
 }
 
 // UI Constructor
-function UI(){}
+function UI() {}
 
 // Add Routine to list prototype
-UI.prototype.addRoutineToList = function(outine) {
+UI.prototype.addRoutineToList = function(routine) {
+
     const list = document.getElementById('routine-list');
 
     // Create a Table row (tr) Element
@@ -17,9 +18,9 @@ UI.prototype.addRoutineToList = function(outine) {
 
     // Insert Cols
     row.innerHTML = `
-        <td>${this.task}</td>
-        <td>${time}</td>
-        <td>${rate}</td>
+        <td>${this.tasks}</td>
+        <td>${this.time}</td>
+        <td>${this.rate}</td>
         <td><a href="#" class="delete-items">X</a></td>
     `;
 
@@ -53,5 +54,5 @@ document.getElementById('tasks-form').addEventListener('submit', function(e){
     // Clear Fields
 
     ui.clearFields();
-    // e.preventDefault();
+    e.preventDefault();
 });
