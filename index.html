@@ -3,54 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- <script type="text/javascript" src="app.js" defer></script> -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-   
-    <title>My Daily Routine</title>
+    <title>Book List</title>
 </head>
 <body>
     <div class="container">
-        <h5 class="welcome">Welcome: <span class="name"></span></h5>
-        <h1>My Daily Schedule Routine</h1>
-        
-            <form id="tasks-form">
+        <h1>Add Book</h1>
+        <form action="" id="book-form">
             <div>
-                <label for="tasks">Tasks</label>
-                <input type="text" id="tasks" placeholder="Enter Task" class="u-full-width">
+                <label for="title">Title</label>
+                <input type="text" id="title" class="u-full-width"> 
             </div>
 
             <div>
-                <label for="time">Time</label>
-                <input type="text" id="time" placeholder="Specify Time" class="u-full-width">
+                <label for="title">Author</label>
+                <input type="text " id="author" class="u-full-width"> 
             </div>
 
             <div>
-                <label for="rate">Level of Importance</label>
-                <input type="text" id="rate" placeholder="Level of Importance" class="u-full-width">
+                <label for="title">ISBN</label>
+                <input type="text" id="isbn" class="u-full-width"> 
             </div>
-        
-            <input type="submit"  value="Schedule">
-            </form>
-        
+
+            <input type="submit" value="Submit" class="u-full-width">
+        </form>
             <hr>
-
+            
             <table class="u-full-width">
                 <thead>
-                    <tr class="table">
-                        <td>Task</th>
-                        <td>Time</th>
-                        <td>Level of Importance</th>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
                         <th></th>
                     </tr>
                 </thead>
-
-                <tbody id="routine-list"></tbody>
+                
+                <tbody id="book-list"></tbody>
             </table>
     </div>
-    <script src="app.js"></script>
+
+    <script src="appes6.js"></script>
 </body>
-
-
-</html>
+</html> 

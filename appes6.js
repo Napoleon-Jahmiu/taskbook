@@ -1,18 +1,13 @@
- // Book Constructor
-function Book(title, author, isbn) {
-    this.title = title;
-    this.author = author;
-    this.isbn = isbn;
+class Book  {
+    constructor(book, author, isbn){
+        this.book = book;
+        this.author = author;
+        this.isbn = isbn;
+    }
+}
 
-}  
-
-
-// UI Constructor
-function UI() {}
-
-// add book to list prototype
-
-UI.prototype.addBookToList = function(book) {
+class UI {
+    addBookToList(book) {
     const list = document.getElementById('book-list');
 
     // create tr element
@@ -27,12 +22,11 @@ UI.prototype.addBookToList = function(book) {
     `;
 
     list.appendChild(row);
-}
- 
 
-// Show Alert
-UI.prototype.showAlert = function (message, className) {
-    // create div
+    }
+
+    showAlert(message, className) {
+         // create div
     const div = document.createElement('div');
     // Add className
     div.className = `alert ${className}`;
@@ -49,21 +43,20 @@ UI.prototype.showAlert = function (message, className) {
     setTimeout(function(){
         document.querySelector('.alert').remove();
     },3000);
-}
-
-// Delete Books Prototype
-UI.prototype.deleteBook = function(target) {
-    if(target.className === 'delete-items') {
-        target.parentElement.parentElement.remove();
     }
-}
 
-//Clear Fields
-UI.prototype.clearFields = function() {
-    document.getElementById('title').value = '';
-    document.getElementById('author').value = '';
-    document.getElementById('isbn').value = '';
 
+    deleteBook(target){
+        if(target.className === 'delete-items') {
+            target.parentElement.parentElement.remove();
+        }
+    }
+
+    clearFields() {
+        document.getElementById('title').value = '';
+        document.getElementById('author').value = '';
+        document.getElementById('isbn').value = '';
+    }
 }
 
 // Add Event Listeners for add book
